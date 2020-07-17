@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+
+}
+
+html{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    letter-spacing: 2px;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("https://articles.gglehi.com/wp-content/uploads/2019/08/Ship-Captain-Crew-Dice-Game.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.gameContainer{
+    position: relative
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContainer{
+    width: 100%;
+    height: 100%;
+}
+.player1 ,.player2{
+    width: 30%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:white;
+}
+
+.currentScore{
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    background:#C0393F;
+    color:white;
+    padding: 2%;
+    opacity: 0.3;
+}
+.active{
+    background-color: #f7f7f7
+}
+.active .playerName { font-weight:bold }
+
+
+.playernameContainer{
+    margin-top: 20%;
+    display: flex;
+    margin-bottom: 7%;
+}
+.playerName{
+    position: relative;
+    font-weight: 200;
+    text-transform: uppercase
+}
+
+.active .playerName::after{
+    content: "\2022";
+    position: absolute;
+    color: #C0393F;
+    top: -4%;
+    right: -20%;
+}
+
+.globalScore{
+    font-size: 60px;
+    font-weight: 300;
+    color:#C0393F;
+}
+.active .currentScore{
+    opacity: 1
+}
+.btn{
+    position: absolute;
+    width: 30%;
+    background: transparent;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover { font-weight: 600; }
+.btn:hover i { margin-right: 20px; }
+
+
+.btn:focus {
+    outline: none;
+}
+
+i {
+    color: #C0393F;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+.newgame{
+    top:20%
+}
+.roledice{
+    bottom: 35%
+}
+.hold{
+    bottom: 25%
+}
+.diceImg{
+    display: none;
+    position: absolute;
+    width: 7%;
+    top: 30%;
+}
+.btn:disabled {
+    display: none;
+  }
+
+  .lostChance{
+      visibility: hidden;
+      font-size: 32px;
+      opacity: 1;
+      position: absolute
+  }
+
+  .animateLostChance{
+    animation: animate 1.3s linear;
+  }
+
+   @keyframes animate {
+      from{
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1)
+      }
+     to{
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(2)
+      }
+  }
+

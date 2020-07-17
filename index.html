@@ -1,0 +1,45 @@
+
+<!doctype html>
+<html>
+  <head>
+      <title>Rolling Dice Game</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+      <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <body>
+
+        <section class="flex gameContainer">
+
+            <div id="player-1" class="player1 active">
+                <div class="playernameContainer">
+                    <h1 class="playerName">Player 1</h1>
+                </div>
+                <h1 id="global-1" class="globalScore">0</h1>
+                <div class="currentScore">
+                        <h3>CURRENT</h3>
+                        <h2 id="current-1" class="">0</h2>
+                </div>
+            </div>
+            <div id="player-2" class="player2">
+                <div class="playernameContainer">
+                    <h1 class="playerName">Player 2</h1>
+                </div>
+                <h1 id="global-2" class="globalScore">0</h1>
+                <div class="currentScore">
+                        <h3>CURRENT</h3>
+                        <h2 id="current-2" class="">0</h2>
+                </div>
+            </div>
+            <button class="btn newgame" onclick="initNewGame()"> <i class="icon ion-md-happy"></i>New Game</button>
+            <button class="btn roledice" onclick="animateDice()"><i class="icon ion-md-sync"></i>Role Dice</button>
+            <span class="lostChance">You Lost The Chance</span>
+            
+            <button class="btn hold" onclick="onHold()"><i class="icon ion-md-hand"></i>Hold</button>
+            <img src="./resources/images/dice-1.png" class="diceImg" alt="img">
+            
+        </section>
+    </body>
+    <script src="app.js"></script>
+  </head>
+</html>
